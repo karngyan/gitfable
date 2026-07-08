@@ -1,0 +1,40 @@
+{
+  "name": "gitfable",
+  "version": "0.1.0",
+  "description": "Your git history, retold as an epic saga. Also does noir and haiku.",
+  "keywords": ["git", "cli", "fun", "story", "saga", "haiku"],
+  "author": "Gyan Prakash Karn <mail@karngyan.com> (https://karngyan.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karngyan/gitfable.git"
+  },
+  "type": "module",
+  "bin": {
+    "gitfable": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm test && pnpm build"
+  },
+  "packageManager": "pnpm@10.30.2",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
