@@ -13,14 +13,13 @@ history changes.
 ## Usage
 
 ```bash
-pnpm install && pnpm build
-node dist/cli.js [path-to-repo]
+npx gitfable                        # the saga of the current repo
+npx gitfable ~/code/my-app -s noir  # hard-boiled case file
+npx gitfable --style haiku          # 5-7-5, guaranteed by law
+npx gitfable --seed "alt timeline"  # re-roll the narration
 
-# or, once linked/published:
-gitfable                        # the saga of the current repo
-gitfable ~/code/my-app -s noir  # hard-boiled case file
-gitfable --style haiku          # 5-7-5, guaranteed by law
-gitfable --seed "alt timeline"  # re-roll the narration
+# or keep it around:
+npm install -g gitfable
 ```
 
 ## A real saga (this is karngyan.com)
